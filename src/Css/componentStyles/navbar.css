@@ -1,0 +1,58 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(248,249,249);
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    width: 450px;
+    
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 23px;
+    transition:font-size 0.5s ease;
+    &:hover{
+        color: rgb(20, 118, 203);
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+.nav button{
+    font-size: 20px;
+    font-family: 'Urbanist', sans-serif;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(20, 118, 203);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(0.9);
+        background-color: white;
+        color: rgb(20,118,203);
+        border: 2px solid rgb(20,118,203);
+    }
+
+
+}
+.logo{
+    background-image: url("../../images/logo.png");
+    width:180px;
+    height: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}

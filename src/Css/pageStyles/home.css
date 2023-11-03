@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Source+Code+Pro:wght@400;500&family=Teko&family=Urbanist&display=swap');
+body{
+    margin: -8px;
+}
+
+.home-body{
+    padding-top: 5px;
+    font-family: Urbanist,"courier new";
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.home-body h1 span{
+
+background: linear-gradient(45deg, rgba(20,118,203,1) 0%, rgba(13,8,65,1) 51%, rgba(18,81,157,1) 100%);
+-webkit-background-clip: text;
+color: transparent;
+}
+.home-body h1{
+    width: 70%;
+    font-size: 70px;
+}
+.home-body p {
+    color: #5b5959;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 70%;
+    height: 150px;
+}
+
+.home-body button{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-family:Urbanist,"courier new" ;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(20,118,203);
+    color: white;
+    transition: transform 0.2s ease-in;
+
+    &:hover{
+        cursor: pointer;
+        color:rgb(20,118,203);
+        font-weight: bold;
+        background-color: white;
+        border:2px solid rgb(20,118,203) ;
+        transform: scale(0.9);
+        
+    }
+}
