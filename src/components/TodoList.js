@@ -119,7 +119,7 @@ const TodoList = () => {
             onChange={(e) => setListTitle(e.target.value)}
           />
           <input
-          className='input'
+          className='input2'
             type="text"
             placeholder="List Description"
             value={listDescription}
@@ -127,7 +127,7 @@ const TodoList = () => {
 
           />
           <input
-          className='input'
+          className='date'
             type="date"
             placeholder="Due Date"
             value={dueDate}
@@ -170,12 +170,14 @@ const TodoList = () => {
           <div>Description: {list.description}</div>
           <div>Due Date: {list.dueDate}</div>
           <div>Priority: {list.priority}</div>
+          <div className='toggel_buttons'>
           <button className='editButton' onClick={() => handleEditList(list.id)} >
             Edit
           </button>
           <button className='deleteButton' onClick={() => handleDeleteList(list.id)} >
             Delete
           </button>
+          </div>
           <input
           className='checkbox'
             type="checkbox"
