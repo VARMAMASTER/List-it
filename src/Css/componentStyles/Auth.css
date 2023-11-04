@@ -23,7 +23,7 @@
     font-family: 'Assistant', sans-serif;
     background-color: white;
     border-radius: 8px;
-    height: 50%;
+    height: 68%;
     width:25%;
 }
 
@@ -38,8 +38,11 @@
     color: rgb(69, 68, 68);
 }
 
-.login_form h4 span a{
+.login_form h4 span {
     color: rgb(1,83,105);
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .login_form form input{
@@ -92,9 +95,9 @@
 }
 
 .down_buttons button{
-    width: 50px;
+    width: 60px;
     height: 35px;
-    font-size: 17px;
+    font-size: 15px;
     font-family:Urbanist,"courier new" ;
     border-radius: 30px;
     border: none;
