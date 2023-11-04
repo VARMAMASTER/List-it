@@ -1,0 +1,42 @@
+.Aboutapp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 655px;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    color: #e7c505;
+    background: rgb(28,28,28);
+background: linear-gradient(45deg, rgba(28,28,28,1) 0%, rgba(14,14,50,1) 51%, rgba(0,8,18,1) 100%);
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(0, 162, 255);
+    border-radius: 20px;
+    width: 80%;
+    height:450px;
+    
+}
+
+.image{
+    margin:0px;
+    background-image: url("../../images/profile.jpg");
+    border-radius: 20px 0px 0px 20px;
+    width: 33%;
+    height: 100%;
+    background-size:100% ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about{
+    margin: 50px;
+    width: 50%;
+
+}

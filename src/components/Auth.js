@@ -14,6 +14,7 @@ export default function Auth() {
 
   const registerHandler = (userData) => {
     localStorage.setItem("user", JSON.stringify(userData));
+    alert("Account has created successfully got to signin")
   };
 
   const loginHandler = (email, password) => {

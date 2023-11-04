@@ -8,8 +8,7 @@ export default function Navbar(props) {
       Item: "Home",
       Link: "/Home",
     },
-    { Item: "About App", Link: "/About-App" },
-    { Item: "About Developer", Link: "/About-Developer" },
+    { Item: "About Developer", Link: "/AboutDeveloper" },
   ];
 
   return (
