@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Bebas+Neue&family=Montserrat&family=Source+Code+Pro:wght@400;500&family=Teko&family=Urbanist&display=swap');
+
+.login{
+    display: flex;
+
+}
+.login_image{
+    background-image: url("../../images/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 46rem;;
+    width: 100%;
+    background-color: black;
+    background-size:100% 100% ;
+    /* filter: opacity(0.1); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form{
+    padding: 30px;
+    font-family: 'Assistant', sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    height: 50%;
+    width:25%;
+}
+
+.login_form form{
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+}
+
+.login_form h4{
+    color: rgb(69, 68, 68);
+}
+
+.login_form h4 span a{
+    color: rgb(1,83,105);
+}
+
+.login_form form input{
+    font-family:'Assistant', sans-serif;
+    font-size: 15px;
+    border: 0 solid gray;
+    border-bottom-width: 1px;
+    color: rgb(57, 57, 57);
+    margin-bottom: 30px;
+    height: 40px;
+    width: 90%;
+    transition: font-size 0.3s ease;
+
+    &:focus{
+        font-family:'Assistant', sans-serif;
+        font-size: 17px;
+        outline: none;
+        border-bottom:2px solid rgb(0, 162, 255) ;
+    }
+
+}
+
+.login_form form button{
+    width: 100px;
+    height: 35px;
+    font-size: 17px;
+    font-family:Urbanist,"courier new" ;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(20,118,203);
+    color: white;
+    transition: transform 0.2s ease-in;
+
+    &:hover{
+        cursor: pointer;
+        color:rgb(20,118,203);
+        font-weight: bold;
+        background-color: white;
+        border:2px solid rgb(20,118,203) ;
+        transform: scale(0.9);
+        
+    }
+}
+
+.down_buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.down_buttons button{
+    width: 50px;
+    height: 35px;
+    font-size: 17px;
+    font-family:Urbanist,"courier new" ;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(1,83,105);;
+    color: white;
+    transition: transform 0.2s ease-in;
+
+    &:hover{
+        cursor: pointer;
+        color:rgb(1,83,105);
+        font-weight: bold;
+        background-color: white;
+        border:2px solid rgb(1,83,105); ;
+        transform: scale(0.9);
+        
+    }
+
+}
