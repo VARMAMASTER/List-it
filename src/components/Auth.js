@@ -1,40 +1,54 @@
 import React, { useState } from "react";
 import "../Css/componentStyles/Auth.css";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+import Navbar from "./Navbar";
+import TodoList from "./TodoList";
 
 export default function Auth() {
   const [isRegister, setRegister] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
   const toggle_Register = () => {
     setRegister(!isRegister);
   };
 
-  
   const registerHandler = (userData) => {
     localStorage.setItem("user", JSON.stringify(userData));
   };
 
-
   const loginHandler = (email, password) => {
-    
     const userData = JSON.parse(localStorage.getItem("user"));
 
     if (userData && userData.email === email && userData.password === password) {
-      alert("User logged in successfully");
+      setLoggedIn(true);
+      alert("User logged in successfull");
     } else {
       alert("Login failed. Please check your credentials.");
     }
   };
 
+  const logoutHandler = () => {
+    setLoggedIn(false);
+  };
+
   return (
     <>
-      <div className="login">
+    
+
+     {isLoggedIn?(
+        <div>
+    <Navbar isLoggedIn={isLoggedIn} logoutHandler={logoutHandler} />
+    <TodoList/>
+    </div>
+     ):(
+        <div className="login">
         <div className="login_image">
           <div className="login_form">
-            <h1>{!isRegister ? "Sign in" : "Create an account"}</h1>
+            <h1>{isRegister ? "Create an account" : "Sign in"}</h1>
             <h4>
-              {!isRegister ? " New user?" : "Already have an account?"}
+              {isRegister ? "Already have an account?" : "New user?"}
               <span onClick={toggle_Register}>
-                {!isRegister ? " Create an account" : " Sign in"}
+                {isRegister ? " Sign in" : " Create an account"}
               </span>
             </h4>
             {isRegister ? (
@@ -53,9 +67,14 @@ export default function Auth() {
           </div>
         </div>
       </div>
+     )}
     </>
+      
+    
   );
 }
+
+
 
 const Loginform = ({ loginHandler }) => {
   const [loginformData, setLoginformData] = useState({

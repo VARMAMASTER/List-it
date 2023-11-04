@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Bebas+Neue&family=Montserrat&family=Source+Code+Pro:wght@400;500&family=Teko&family=Urbanist&display=swap');
+.todo{
+    padding: 50px;
+    font-family: 'Urbanist', sans-serif;
+}
+.addButton {
+    font-family: 'Urbanist', sans-serif;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    background-color: rgb(20,118,203);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    &:hover{
+        background-color: white;
+        color: rgb(20,118,203);
+        border: 2px solid rgb(20,118,203);
+    }
+  }
+
+  .addButtons {
+    font-family: 'Urbanist', sans-serif;
+    width: 150px;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 15px;
+    background-color: rgb(20,118,203);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    &:hover{
+        background-color: white;
+        color: rgb(20,118,203);
+        border: 2px solid rgb(20,118,203);
+    }
+  }
+  
+  .formContainer {
+    margin: 10px 0;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+  }
+  
+  .createButton {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .filterSortContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .listItem {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .editButton {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .deleteButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .checkbox {
+    margin: 0 10px;
+  }
+  

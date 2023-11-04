@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../Css/componentStyles/Todolist.css";
 
 const TodoList = () => {
   const [showForm, setShowForm] = useState(false);
@@ -6,7 +7,7 @@ const TodoList = () => {
   const [listTitle, setListTitle] = useState('');
   const [listDescription, setListDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
-  const [priority, setPriority] = useState('medium'); // Default priority
+  const [priority, setPriority] = useState('medium'); 
   const [showCompleted, setShowCompleted] = useState(false);
   const [sortCriteria, setSortCriteria] = useState(null);
   const [editingList, setEditingList] = useState(null);
@@ -102,50 +103,52 @@ const TodoList = () => {
   }
 
   return (
-    <div>
-      <button onClick={() => setShowForm(true)} style={styles.addButton}>
-        +
+    <>
+    <div className='todo'>
+      <button className='addButton' onClick={() => setShowForm(true)} >
+        Add Task +
       </button>
 
       {showForm && (
-        <div style={styles.formContainer}>
+        <div className='formContainer' >
           <input
+          className='input'
             type="text"
             placeholder="List Title"
             value={listTitle}
             onChange={(e) => setListTitle(e.target.value)}
-            style={styles.input}
           />
           <input
+          className='input'
             type="text"
             placeholder="List Description"
             value={listDescription}
             onChange={(e) => setListDescription(e.target.value)}
-            style={styles.input}
+
           />
           <input
+          className='input'
             type="date"
             placeholder="Due Date"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
-            style={styles.input}
           />
           <select
+          className='select'
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
-            style={styles.select}
           >
             <option value="high">High</option>
             <option value="medium">Medium</option>
             <option value="low">Low</option>
           </select>
-          <button onClick={handleCreateList} style={styles.createButton}>
+          <button className='createButton' onClick={handleCreateList} >
             {editingList ? 'Save' : 'Create'}
           </button>
         </div>
       )}
 
-      <div style={styles.filterSortContainer}>
+      <div className='filterSortContainer' >
         <div>
           <label>Show Completed Tasks</label>
           <input
@@ -155,94 +158,35 @@ const TodoList = () => {
           />
         </div>
         <div>
-          <button onClick={() => sortTasks('dueDate')}>Sort by Due Date</button>
-          <button onClick={() => sortTasks('priority')}>Sort by Priority</button>
+          <button className='addButtons' onClick={() => sortTasks('dueDate')}>Sort by Due Date</button>
+          <button className='addButtons' onClick={() => sortTasks('priority')}>Sort by Priority</button>
         </div>
       </div>
 
       {sortedLists.map((list) => (
-        <div key={list.id} style={styles.listItem}>
+        <div className='listItem' key={list.id} >
           <div>Date Created: {list.dateCreated}</div>
           <div>Title: {list.title}</div>
           <div>Description: {list.description}</div>
           <div>Due Date: {list.dueDate}</div>
           <div>Priority: {list.priority}</div>
-          <button onClick={() => handleEditList(list.id)} style={styles.editButton}>
+          <button className='editButton' onClick={() => handleEditList(list.id)} >
             Edit
           </button>
-          <button onClick={() => handleDeleteList(list.id)} style={styles.deleteButton}>
+          <button className='deleteButton' onClick={() => handleDeleteList(list.id)} >
             Delete
           </button>
           <input
+          className='checkbox'
             type="checkbox"
             checked={list.completed}
             onChange={() => toggleTaskCompletion(list.id)}
-            style={styles.checkbox}
           /> Task Completed
         </div>
       ))}
     </div>
+    </>
   );
-};
-
-const styles = {
-  addButton: {
-    fontSize: '24px',
-    backgroundColor: 'green',
-    color: 'white',
-    border: 'none',
-    cursor: 'pointer',
-    marginBottom: '10px',
-  },
-  formContainer: {
-    margin: '10px 0',
-  },
-  input: {
-    width: '100%',
-    padding: '5px',
-    margin: '5px 0',
-  },
-  select: {
-    width: '100%',
-    padding: '5px',
-    margin: '5px 0',
-  },
-  createButton: {
-    backgroundColor: 'green',
-    color: 'white',
-    border: 'none',
-    padding: '5px 10px',
-    cursor: 'pointer',
-  },
-  filterSortContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    margin: '10px 0',
-  },
-  listItem: {
-    border: '1px solid #ccc',
-    borderRadius: '5px',
-    padding: '10px',
-    margin: '10px 0',
-  },
-  editButton: {
-    backgroundColor: 'blue',
-    color: 'white',
-    border: 'none',
-    padding: '5px 10px',
-    cursor: 'pointer',
-  },
-  deleteButton: {
-    backgroundColor: 'red',
-    color: 'white',
-    border: 'none',
-    padding: '5px 10px',
-    cursor: 'pointer',
-  },
-  checkbox: {
-    margin: '0 10px',
-  },
 };
 
 export default TodoList;

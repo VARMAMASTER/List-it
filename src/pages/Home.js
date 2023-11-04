@@ -2,10 +2,10 @@ import React from "react";
 import "../Css/pageStyles/home.css";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import TodoList from "../components/TodoList";
 export default function Home() {
   return (
     <>
+      <Navbar/>
       <div className="home-body">
         <h1>
           Unlock Your Productivity:
@@ -27,7 +27,6 @@ export default function Home() {
         </button>
       </Link>
       </div>
-      
     </>
   );
 }
